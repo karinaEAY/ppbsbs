@@ -18,8 +18,8 @@
       --soft: #fff5f6; /* Був: #f3f5fa */
     }
     html, body {
-      /* Новий анімований суцільний фон, що переливається */
-      background-color: #f8b195; /* Початковий колір */
+      /* Новий анімований суцільний фон, що переливається (темні кольори) */
+      background-color: #0f0c29; /* Початковий колір (змінено) */
       animation: gradientBG 15s ease infinite;
       /* --- */
       margin: 0; padding: 0;
@@ -78,7 +78,9 @@
       transform: translateY(-3px) scale(1.016);
     }
     .card-img {
-      width: 81px; height: 107px; object-fit: contain; border-radius: 13px;
+      width: 70px; /* Змінено з 81px */
+      height: 95px; /* Змінено з 107px */
+      object-fit: contain; border-radius: 13px;
       background: var(--soft); /* Оновлений фон */
       margin-bottom: 7px; transition: filter .13s;
       filter: drop-shadow(0 4px 14px #8891); box-shadow: 0 2px 10px #d6dcfc;
@@ -96,23 +98,28 @@
     }
     .card-stars { display: flex; align-items: center; gap: 2px; margin-bottom: 3px; font-size: 1.03em; letter-spacing: 0.01em; }
     .star { color: gold; font-size: 1.07rem; margin-right: 1.1px; filter: drop-shadow(0 1px 1px #fe2c5512); text-shadow: 0 1px 2px #ffefb7b9; }
-    .sim-icons { display: flex; gap: 11px; margin: 7px 0 0 0; justify-content: center; }
+    .sim-icons { 
+      display: flex; /* Змінено з grid на flex */
+      justify-content: center; /* Додано для центрування */
+      gap: 8px; /* Залишено проміжок між іконками */
+      margin: 7px auto 0 auto; /* Центрування */
+      width: fit-content; /* Ширина по вмісту */
+    }
     .sim-icon-img {
-      width: 36px; height: 36px; background: var(--soft); /* Оновлений фон */
+      width: 30px; /* Менший розмір */
+      height: 30px; /* Менший розмір */
+      background: var(--soft); /* Оновлений фон */
       border-radius: 9px;
       border: 2px solid #e7e8fc; object-fit: contain; box-shadow: 0 1px 7px #e2e6fc;
       padding: 2px; transition: box-shadow .12s, border .12s;
     }
     .footer {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: var(--block); box-shadow: 0 -1px 10px #f672802a; /* Оновлена тінь */
-      height: 59px;
-      display: flex; align-items: center; justify-content: center; z-index: 21;
-      border-top-left-radius: 15px; border-top-right-radius: 15px;
+      /* Цей блок повністю приховано */
+      display: none !important;
     }
     .bell {
-      width: 27px; height: 27px; opacity: 0.62;
-      filter: drop-shadow(0 1.2px 2.5px #675cff16);
+      /* Це також приховано, оскільки батьківський .footer прихований */
+      display: none !important;
     }
     .modal-bg {
       position: fixed; top:0;left:0;right:0;bottom:0;
@@ -230,13 +237,13 @@
       text-shadow: 0 2px 14px #0a55158a;
     }
 
-    /* Анімація для фону (змінено на background-color) */
+    /* Анімація для фону (змінено на темні кольори) */
     @keyframes gradientBG {
-      0%   { background-color: #f8b195; }
-      25%  { background-color: #f67280; }
-      50%  { background-color: #c06c84; }
-      75%  { background-color: #6c5b7b; }
-      100% { background-color: #f8b195; }
+      0%   { background-color: #0f0c29; }
+      25%  { background-color: #302b63; }
+      50%  { background-color: #24243e; }
+      75%  { background-color: #302b63; }
+      100% { background-color: #0f0c29; }
     }
 
     @media (max-width: 700px) {
@@ -560,5 +567,7 @@
   </script>
 </body>
 </html>
+
+
 
 
