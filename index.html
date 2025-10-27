@@ -8,18 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Нова "західна" (sunset) колірна гама */
-      --main: #f67280; /* Був: #675cff */
-      --main2: #6c5b7b; /* Був: #fe2c55 */
-      --shadow: 0 2px 18px #f672802a; /* Був: #6563ff19 */
+      /* "Західна" (sunset) колірна гама */
+      --main: #f67280; 
+      --main2: #6c5b7b; 
+      --shadow: 0 2px 18px #f672802a; 
       --radius: 18px;
-      --bg: #f8b195; /* Був: #050505 (тепер це резервний колір) */
+      --bg: #343d46; /* Темний фон */
       --block: #fff;
-      --soft: #fff5f6; /* Був: #f3f5fa */
+      --soft: #fff5f6; 
     }
     html, body {
-      /* Новий анімований суцільний фон, що переливається (темні кольори) */
-      background-color: #0f0c29; /* Початковий колір (змінено) */
+      /* Темний анімований фон */
+      background-color: #343d46; /* Початковий колір */
       animation: gradientBG 15s ease infinite;
       /* --- */
       margin: 0; padding: 0;
@@ -42,7 +42,6 @@
     .logo {
       font-weight: 900; font-size: 1.35rem; letter-spacing: 2px;
       color: var(--main);
-      /* Градієнт логотипу автоматично оновився завдяки CSS-змінним */
       background: linear-gradient(90deg, var(--main) 40%, var(--main2) 90%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -73,15 +72,15 @@
       min-height: 220px; border: 1.5px solid #edeef9; overflow: hidden;
     }
     .card:hover, .card:active {
-      box-shadow: 0 9px 36px #f672803a; /* Оновлена тінь */
-      border: 1.8px solid var(--main2); /* Оновлений колір рамки */
+      box-shadow: 0 9px 36px #f672803a; 
+      border: 1.8px solid var(--main2); 
       transform: translateY(-3px) scale(1.016);
     }
     .card-img {
-      width: 70px; /* Змінено з 81px */
-      height: 95px; /* Змінено з 107px */
+      width: 70px; /* Зменшено */
+      height: 95px; /* Зменшено */
       object-fit: contain; border-radius: 13px;
-      background: var(--soft); /* Оновлений фон */
+      background: var(--soft); 
       margin-bottom: 7px; transition: filter .13s;
       filter: drop-shadow(0 4px 14px #8891); box-shadow: 0 2px 10px #d6dcfc;
     }
@@ -99,27 +98,25 @@
     .card-stars { display: flex; align-items: center; gap: 2px; margin-bottom: 3px; font-size: 1.03em; letter-spacing: 0.01em; }
     .star { color: gold; font-size: 1.07rem; margin-right: 1.1px; filter: drop-shadow(0 1px 1px #fe2c5512); text-shadow: 0 1px 2px #ffefb7b9; }
     .sim-icons { 
-      display: flex; /* Змінено з grid на flex */
+      display: flex; /* Змінено на flex */
       justify-content: center; /* Додано для центрування */
-      gap: 8px; /* Залишено проміжок між іконками */
+      gap: 8px; /* Проміжок між іконками */
       margin: 7px auto 0 auto; /* Центрування */
       width: fit-content; /* Ширина по вмісту */
     }
     .sim-icon-img {
       width: 30px; /* Менший розмір */
       height: 30px; /* Менший розмір */
-      background: var(--soft); /* Оновлений фон */
+      background: var(--soft); 
       border-radius: 9px;
       border: 2px solid #e7e8fc; object-fit: contain; box-shadow: 0 1px 7px #e2e6fc;
       padding: 2px; transition: box-shadow .12s, border .12s;
     }
     .footer {
-      /* Цей блок повністю приховано */
-      display: none !important;
+      display: none !important; /* Приховано */
     }
     .bell {
-      /* Це також приховано, оскільки батьківський .footer прихований */
-      display: none !important;
+      display: none !important; /* Приховано */
     }
     .modal-bg {
       position: fixed; top:0;left:0;right:0;bottom:0;
@@ -129,7 +126,7 @@
       touch-action: none;
     }
     .modal {
-      background: var(--block); border-radius: 23px; box-shadow: 0 4px 32px #f672803a; /* Оновлена тінь */
+      background: var(--block); border-radius: 23px; box-shadow: 0 4px 32px #f672803a; 
       min-width: 245px; max-width: 97vw; padding: 25px 14px 17px 14px; position: relative;
       animation: pop .21s cubic-bezier(.7,-0.06,.49,1.4); transition: box-shadow .18s;
       border: 2.5px solid #edeef9;
@@ -140,10 +137,10 @@
       position: absolute; top: 13px; right: 19px; background: none; border: none;
       font-size: 1.28rem; color: #b3b6ce; cursor: pointer; transition: color .11s; z-index: 2; font-weight: bold;
     }
-    .modal-close:hover { color: var(--main); } /* Оновлений колір */
+    .modal-close:hover { color: var(--main); } 
     .modal-img {
       width: 87px; height: 112px; object-fit: contain; display: block; margin: 0 auto 13px auto;
-      border-radius: 12px; background: var(--soft); /* Оновлений фон */
+      border-radius: 12px; background: var(--soft); 
       box-shadow: 0 2px 11px #a5b5dc36;
     }
     .modal-colors, .modal-storages, .modal-sims {
@@ -154,18 +151,18 @@
       cursor: pointer; transition: border .15s, box-shadow .14s; box-sizing: border-box;
       margin-bottom: 2px; box-shadow: 0 1px 7px #aaa2;
     }
-    .modal-color.selected { border: 3px solid var(--main); box-shadow: 0 3px 13px #f672805a; } /* Оновлені кольори */
+    .modal-color.selected { border: 3px solid var(--main); box-shadow: 0 3px 13px #f672805a; } 
     .modal-storage {
-      min-width: 57px; padding: 7px 12px; border-radius: 10px; font-size: 1.1rem; background: var(--soft); /* Оновлений фон */
+      min-width: 57px; padding: 7px 12px; border-radius: 10px; font-size: 1.1rem; background: var(--soft); 
       color: var(--main); border: 2.3px solid #e6e7fb; cursor: pointer; font-weight: 700;
     }
-    .modal-storage.selected { border: 2.6px solid var(--main); background: #fff4f6; color: var(--main); box-shadow: 0 1px 7px #f6728033; } /* Оновлені кольори */
+    .modal-storage.selected { border: 2.6px solid var(--main); background: #fff4f6; color: var(--main); box-shadow: 0 1px 7px #f6728033; } 
     .modal-sim {
-      border-radius: 13px; padding: 4px; border: 2.4px solid #e7e8fc; background: var(--soft); /* Оновлений фон */
+      border-radius: 13px; padding: 4px; border: 2.4px solid #e7e8fc; background: var(--soft); 
       cursor: pointer; transition: border .14s, box-shadow .13s; box-shadow: 0 1.7px 7px #e3e6f8;
       display: flex; align-items: center; justify-content: center; margin-bottom: 2px;
     }
-    .modal-sim.selected { border: 2.7px solid var(--main); background: #fff4f7; box-shadow: 0 2px 9px #f672804d; } /* Оновлені кольори */
+    .modal-sim.selected { border: 2.7px solid var(--main); background: #fff4f7; box-shadow: 0 2px 9px #f672804d; } 
     .modal-sim img {
       width: 40px; height: 40px; object-fit: contain; border-radius: 7px; background: #fafafd;
       border: none; transition: box-shadow .14s; box-shadow: 0 1.5px 6px #d9dafc;
@@ -174,16 +171,15 @@
     .modal-rating { font-size: 1.01rem; margin-bottom: 3px; text-align: center; color: #666; font-weight: 600; }
     .modal-continue {
       display: block;
-      /* Градієнт кнопки оновлено автоматично */
       background: linear-gradient(90deg,var(--main) 60%,var(--main2));
       color: #fff; border: none; width: 100%; font-size: 1.11rem; padding: 15px 0; border-radius: 13px;
-      margin-top: 13px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 9px #f6728045; /* Оновлена тінь */
+      margin-top: 13px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 9px #f6728045; 
       transition: background .13s; letter-spacing: 0.04em;
       font-size: 1.15rem;
     }
     .modal-continue:active { opacity: 0.89; }
     .delivery-anim-bg {
-      position: fixed; top:0;left:0;right:0;bottom:0; background: rgba(255, 248, 249, 0.99); /* Оновлений фон завантаження */
+      position: fixed; top:0;left:0;right:0;bottom:0; background: rgba(255, 248, 249, 0.99); 
       z-index: 130; display: flex; align-items: center; justify-content: center;
       transition: background .33s; overflow: hidden;
       touch-action: none;
@@ -237,25 +233,28 @@
       text-shadow: 0 2px 14px #0a55158a;
     }
 
-    /* Анімація для фону (змінено на темні кольори) */
+    /* Анімація для темного фону */
     @keyframes gradientBG {
-      0%   { background-color: #0f0c29; }
-      25%  { background-color: #302b63; }
-      50%  { background-color: #24243e; }
-      75%  { background-color: #302b63; }
-      100% { background-color: #0f0c29; }
+      0%   { background-color: #343d46; }
+      25%  { background-color: #2b2e38; }
+      50%  { background-color: #4b3843; }
+      75%  { background-color: #3d313a; }
+      100% { background-color: #343d46; }
     }
 
     @media (max-width: 700px) {
-      .main-list {max-width: 100vw;}
-      .card {width: 96vw; max-width: 220px;}
+      .main-list {max-width: 100vw; justify-content: space-evenly;} /* Додано space-evenly */
+      .card {
+          width: 45%; /* Змінено для 2-х колонок */
+          max-width: 220px;
+      }
       .modal {max-width:98vw;}
       .delivery-car-img {width:92vw; min-width:140px; max-width:99vw;}
       .delivery-greenbox {max-width:95vw;}
     }
     @media (max-width: 400px) {
       .main-list {gap: 9px;}
-      .card {min-height: 180px;}
+      .card {min-height: 180px; width: 45%;} /* Застосовано 45% і тут */
       .delivery-car-img {width:97vw;}
       .delivery-greenbox {padding:36px 6vw 24px 6vw;}
     }
@@ -269,9 +268,8 @@
     </div>
   </div>
   <div class="main-list" id="main-list"></div>
-  <div class="footer">
-    <svg class="bell" fill="none" viewBox="0 0 24 24"><path d="M14 19.5A2 2 0 0 1 12 21.5a2 2 0 0 1-2-2" stroke="#222" stroke-width="1.5" stroke-linecap="round"/><path d="M5.5 8A6.5 6.5 0 1 1 18.5 8c0 7-2.5 9-6.5 9S5.5 15 5.5 8Z" stroke="#222" stroke-width="1.5"/></svg>
-  </div>
+  <!-- Футер прихований через CSS -->
+  <!-- <div class="footer"> ... </div> -->
   <div id="modal-bg" class="modal-bg hidden"></div>
   <div id="delivery-bg" class="delivery-anim-bg hidden"></div>
   <script>
@@ -283,14 +281,14 @@
     const phones = [
       // IPHONES новые
       {
-        title: "iPhone 17 Pro Max (Orange)", // Змінено
-        desc: "Flagship, 2025", // Змінено
-        rating: 5.0, // Змінено
-        img: "https://my-apple.com.ua/image/catalog/products/iphone/iphone-17-pro-max/iphone-17-pro-max-cosmic-orange-1.png", // Змінено
+        title: "iPhone 17 Pro Max (Orange)", 
+        desc: "Flagship, 2025", 
+        rating: 5.0, 
+        img: "https://my-apple.com.ua/image/catalog/products/iphone/iphone-17-pro-max/iphone-17-pro-max-cosmic-orange-1.png", 
         colors: [
-          {name:"Cosmic Orange", url:"https://my-apple.com.ua/image/catalog/products/iphone/iphone-17-pro-max/iphone-17-pro-max-cosmic-orange-1.png", hex:"#f37a48"} // Змінено
+          {name:"Cosmic Orange", url:"https://my-apple.com.ua/image/catalog/products/iphone/iphone-17-pro-max/iphone-17-pro-max-cosmic-orange-1.png", hex:"#f37a48"} 
         ],
-        storages: ["256GB", "512GB", "1TB"] // Змінено
+        storages: ["256GB", "512GB", "1TB"] 
       },
       {
         title: "iPhone 16 Pro Max (Black)",
@@ -567,7 +565,4 @@
   </script>
 </body>
 </html>
-
-
-
 
